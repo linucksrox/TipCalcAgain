@@ -5,5 +5,9 @@
     <string name="bill_amount_label">Bill Amount</string>
     <string name="percent_label">Percent</string>
     <string name="percent_amount">15%</string>
+    <string name="tip_label">Tip</string>
+    <string name="tip_amount">$0.00</string>
+    <string name="total_label">Total</string>
+    <string name="total_amount">$0.00</string>
 
 </resources>

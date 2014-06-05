@@ -16,11 +16,15 @@ public class TipCalcAgainActivity extends Activity
 	implements OnEditorActionListener, OnSeekBarChangeListener {
 	
 	private String billAmountString;
-	private float billAmount;
 	private EditText billAmountEditText;
+	private float billAmount;
 	private TextView percentAmountTextView;
 	private SeekBar percentSeekBar;
 	private float tipPercent;
+	private TextView tipAmountTextView;
+	private float tipAmount;
+	private TextView totalAmountTextView;
+	private float totalAmount;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class TipCalcAgainActivity extends Activity
 		billAmountEditText = (EditText) findViewById(R.id.billAmountEditText);
 		percentAmountTextView = (TextView) findViewById(R.id.percentAmount);
 		percentSeekBar = (SeekBar) findViewById(R.id.percentSeekBar);
+		tipAmountTextView = (TextView) findViewById(R.id.tipAmount);
+		totalAmountTextView = (TextView) findViewById(R.id.totalAmount);
 		
 		// set up listeners for stuff
 		billAmountEditText.setOnEditorActionListener(this);
@@ -47,13 +53,19 @@ public class TipCalcAgainActivity extends Activity
 			billAmount = Float.parseFloat(billAmountString);
 		}
 		
-		// get tip percent
+		// calculate actual values
 		int progress = percentSeekBar.getProgress();
 		tipPercent = (float) progress / 100;
+		tipAmount = billAmount * tipPercent;
+		totalAmount = billAmount + tipAmount;
 		
 		// display new values
 		NumberFormat percent = NumberFormat.getPercentInstance();
 		percentAmountTextView.setText(percent.format(tipPercent));
+		
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		tipAmountTextView.setText(currency.format(tipAmount));
+		totalAmountTextView.setText(currency.format(totalAmount));
 	}
 
 	@Override

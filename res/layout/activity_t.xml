@@ -56,4 +56,38 @@
         android:max="30"
         android:progress="15" />
 
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/percentLabel"
+        android:layout_below="@+id/percentLabel"
+        android:layout_marginTop="18dp"
+        android:text="@string/tip_label" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipLabel"
+        android:layout_below="@+id/tipLabel"
+        android:layout_marginTop="18dp"
+        android:text="@string/total_label" />
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tipLabel"
+        android:layout_alignLeft="@+id/percentAmount"
+        android:text="@string/tip_amount" />
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totalLabel"
+        android:layout_alignLeft="@+id/tipAmount"
+        android:text="@string/total_amount" />
+
 </RelativeLayout>
