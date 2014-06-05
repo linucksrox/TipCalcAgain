@@ -3,5 +3,7 @@
     <string name="app_name">Tip Calc Again</string>
     
     <string name="bill_amount_label">Bill Amount</string>
+    <string name="percent_label">Percent</string>
+    <string name="percent_amount">15%</string>
 
 </resources>

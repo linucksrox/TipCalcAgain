@@ -3,8 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.linucksrox.tipcalcagain.TipCalcAgainActivity"
-    tools:ignore="MergeRootFrame" >
+    tools:context="com.linucksrox.tipcalcagain.TipCalcAgainActivity" >
 
     <TextView
         android:id="@+id/billAmountLabel"
@@ -28,5 +27,33 @@
 
         <requestFocus />
     </EditText>
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billAmountLabel"
+        android:layout_below="@+id/billAmountLabel"
+        android:layout_marginTop="20dp"
+        android:text="@string/percent_label" />
+
+    <TextView
+        android:id="@+id/percentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/percentLabel"
+        android:layout_alignBottom="@+id/percentLabel"
+        android:layout_alignLeft="@+id/billAmountEditText"
+        android:text="@string/percent_amount" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/percentAmount"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/percentAmount"
+        android:max="30"
+        android:progress="15" />
 
 </RelativeLayout>
