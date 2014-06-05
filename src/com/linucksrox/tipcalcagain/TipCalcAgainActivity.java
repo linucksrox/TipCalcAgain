@@ -79,7 +79,7 @@ public class TipCalcAgainActivity extends Activity
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress,
 			boolean fromUser) {
-		// TODO Auto-generated method stub
+		calculateAndDisplay();
 		
 	}
 
@@ -91,8 +91,7 @@ public class TipCalcAgainActivity extends Activity
 
 	@Override
 	public void onStopTrackingTouch(SeekBar seekBar) {
-		// TODO Auto-generated method stub
-		calculateAndDisplay();
+		//calculateAndDisplay();
 	}
 
 }
