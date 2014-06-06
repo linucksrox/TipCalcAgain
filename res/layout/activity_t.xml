@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/billAmountLabel"
+        android:layout_alignParentRight="true"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/billAmountLabel"
         android:ems="8"
@@ -45,16 +46,6 @@
         android:layout_alignBottom="@+id/percentLabel"
         android:layout_alignLeft="@+id/billAmountEditText"
         android:text="@string/percent_amount" />
-
-    <SeekBar
-        android:id="@+id/percentSeekBar"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/percentAmount"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/percentAmount"
-        android:max="30"
-        android:progress="15" />
 
     <TextView
         android:id="@+id/tipLabel"
@@ -89,5 +80,14 @@
         android:layout_alignBottom="@+id/totalLabel"
         android:layout_alignLeft="@+id/tipAmount"
         android:text="@string/total_amount" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tipLabel"
+        android:layout_alignParentRight="true"
+        android:max="30"
+        android:progress="15" />
 
 </RelativeLayout>
